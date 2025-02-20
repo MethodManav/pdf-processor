@@ -38,7 +38,7 @@ export default function PDFViewer() {
       const formData = new FormData();
       formData.append("file", file);
       const response = await axios.post(
-        "http://127.0.0.1:8000/upload",
+        `${process.env.NEXT_PUBLIC_SERVER_URL}`,
         formData,
         {
           headers: {
